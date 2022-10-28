@@ -47,7 +47,7 @@ void loop()
   Serial.println();
   Serial.print("Message : ");
   content.toUpperCase();
-  if (content.substring(1) == "C2 D0 C0 89" )//  content.substring(1) == "97 4F 04 37"  content.substring(1)=="4B B3 5F C0") 
+  if (content.substring(1) == "C2 D0 C0 89" )//  The RFID tag ID no. should be placed here...
   {
     Serial.println("Authorized access");
     int j=1;
@@ -58,14 +58,12 @@ void loop()
       }
     }
     j=j-1;
-    
-    Serial.println("Vamsi age =20 s = M");
         Serial.println();
 
     delay(500);
   
   }
-  else  if (content.substring(1) == "3A F4 55 0D" )//  content.substring(1) == "97 4F 04 37"  content.substring(1)=="4B B3 5F C0") 
+  else  if (content.substring(1) == "3A F4 55 0D" )// The RFID tag ID no. should be placed here...
   {
     Serial.println("Authorized access");
     int j=1;
@@ -76,7 +74,6 @@ void loop()
       }
     }
     j=j-1;
-    Serial.println("Kalyan age = 20 s= M");
     Serial.println();
     delay(500);
   
